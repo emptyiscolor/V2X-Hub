@@ -11,7 +11,7 @@ on:
 
 jobs:
   v2xhub-docker:
-    runs-on: [self-hosted]  # 👈 restrict to self-hosted runners only
+    runs-on: [self-hosted]  # ✅ restrict to self-hosted runners only
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,12 +31,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: usdotfhwaops/php
+          images: bugbusterofficial/php  
           tags: |
             type=schedule
             type=ref,event=branch
             type=ref,event=tag
             type=ref,event=pr
+            # set latest tag for default branch
             type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push
