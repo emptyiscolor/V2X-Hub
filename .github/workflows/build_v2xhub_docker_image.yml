@@ -31,7 +31,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: emptyiscolor/v2xhub
+          images: bugbusterofficial/v2xhub
           flavor: |
             latest=false
           tags: |
@@ -69,7 +69,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: emptyiscolor/v2xhub
+          images: bugbusterofficial/v2xhub
           flavor: |
             latest=false
           tags: |
@@ -101,7 +101,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: emptyiscolor/v2xhub
+          images: bugbusterofficial/v2xhub
           flavor: |
             latest=false
           tags: |
